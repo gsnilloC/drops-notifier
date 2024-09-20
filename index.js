@@ -1,27 +1,32 @@
 const { sneaksApiFunctionWrapper } = require("./sneakers.js");
 const { sendEmailToSubscriber } = require("./emailer.js");
+const { storeSneakerData } = require("./db.js");
 
 exports.handler = async (event) => {
   try {
-    // Extract parameters from the event object
-    const styleID = event.styleID || "DZ2547-100"; // Default to a sample styleID if not provided
-    const email = event.email || ["default@example.com"]; // Default to a sample email if not provided
+    const styleID = event.styleID || "669630-604";
+    const email = event.email || "default@example.com";
+    const priceTarget = event.priceTarget || 100;
+    const notify = event.notify !== undefined ? event.notify : true;
 
-    // Fetch sneaker details
     const sneaker = await sneaksApiFunctionWrapper(styleID);
 
-    // Send an email to the subscriber
-    await sendEmailToSubscriber(sneaker, [email]);
+    // Check if the current price is lower than the target price and notify the user
+    // if (notify && sneaker.price <= priceTarget) {
+    //   await sendEmailToSubscriber(sneaker, [email]);
+    // }
+
+    // Store the sneaker data in DynamoDB
+    await storeSneakerData(sneaker, { email, priceTarget, notify });
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "Email sent successfully!" }),
     };
   } catch (error) {
     console.error("Error:", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: "Error occurred" }),
+      body: JSON.stringify({ message: "Error occurred", error: error.message }),
     };
   }
 };

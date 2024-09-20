@@ -1,4 +1,4 @@
-# Sneaker Price Drop Notification Service
+# drops.
 
 ![AWS Lambda](https://img.shields.io/badge/AWS%20Lambda-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![AWS DynamoDB](https://img.shields.io/badge/AWS%20DynamoDB-4053D6.svg?style=for-the-badge&logo=amazon-dynamodb&logoColor=white)
@@ -7,7 +7,7 @@
 
 ## Overview
 
-This project is an AWS Lambda function that integrates with a sneaker API to track sneaker prices, send email notifications to users when the price drops below a target value, and store the data in AWS DynamoDB for future reference.
+This project is an AWS Lambda function that fetches sneaker prices, send email notifications to users when the price drops below a target value, and store the data in AWS DynamoDB for future reference.
 
 ### Features:
 - **Sneaker Price Lookup**: Fetch real-time sneaker prices and metadata.

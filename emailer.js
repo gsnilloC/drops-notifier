@@ -16,7 +16,7 @@ transporter.verify(function (error, success) {
     console.log("Error verifying Mailtrap connection:", error);
   } else {
     console.log("Mailtrap is ready to take our messages");
-  }
+  } 
 });
 
 function sendEmailToSubscriber(sneaker, subscriber) {

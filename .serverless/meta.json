@@ -1,0 +1,77 @@
+{
+  "/Users/sirbo/drops/drops-notifier": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.0",
+    "isWithinCompose": false,
+    "isCfn": true,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>"
+    },
+    "composeServiceName": null,
+    "servicePath": "/Users/sirbo/drops/drops-notifier",
+    "serviceConfigFileName": "/Users/sirbo/drops/drops-notifier/template.yml",
+    "service": {
+      "templateFile": {
+        "AWSTemplateFormatVersion": "2010-09-09",
+        "Transform": "AWS::Serverless-2016-10-31",
+        "Resources": {
+          "MyLambdaFunction": {
+            "Type": "AWS::Serverless::Function",
+            "Properties": {
+              "Handler": "index.handler",
+              "Runtime": "nodejs18.x",
+              "CodeUri": ".",
+              "MemorySize": 128,
+              "Timeout": 100
+            }
+          }
+        }
+      },
+      "samConfigFile": {}
+    },
+    "command": [
+      "config",
+      "credentials",
+      "debug"
+    ],
+    "options": {
+      "provider": "aws",
+      "key": "AKIA6GBMHXYQIQVLNLET",
+      "secret": "<REDACTED>"
+    },
+    "error": {
+      "message": "Please specify a stack name using the --stack option, or persist it in the samconfig.toml file.",
+      "stack": "Error: Please specify a stack name using the --stack option, or persist it in the samconfig.toml file.\n    at getCfnConfig (file:///Users/sirbo/.serverless/releases/4.4.0/package/dist/sf-core.js:942:10882)\n    at runCfn (file:///Users/sirbo/.serverless/releases/4.4.0/package/dist/sf-core.js:945:2063)\n    at route (file:///Users/sirbo/.serverless/releases/4.4.0/package/dist/sf-core.js:968:14005)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Object.run2 [as run] (file:///Users/sirbo/.serverless/releases/4.4.0/package/dist/sf-core.js:968:14419)\n    at async run3 (file:///Users/sirbo/.serverless/releases/4.4.0/package/dist/sf-core.js:968:15683)",
+      "code": "MISSING_STACK_NAME"
+    },
+    "params": {},
+    "machineId": "063dc1f945a1191e4c85b9626a759f46",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "e10998dd-ab2c-4f85-b095-718a40aaee7d",
+    "orgName": "drops",
+    "userId": "HB0YfhC1GgXK8szqKT",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "drops",
+    "subscription": null,
+    "userEmail": "cgichohi2018@gmail.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "975050358304",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}

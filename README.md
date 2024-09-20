@@ -9,6 +9,8 @@
 
 This project is an AWS Lambda function that fetches sneaker prices, send email notifications to users when the price drops below a target value, and store the data in AWS DynamoDB for future reference.
 
+### https://drops-site.vercel.app/
+
 ### Features:
 - **Sneaker Price Lookup**: Fetch real-time sneaker prices and metadata.
 - **Email Notifications**: Sends an email notification to users when the sneaker price meets or drops below their specified price target.

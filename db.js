@@ -28,7 +28,7 @@ async function storeSneakerData(sneaker, event) {
     console.log("Data stored successfully in DynamoDB");
   } catch (error) {
     console.error("Error storing data in DynamoDB:", error);
-    throw new Error("DynamoDB storage failed");
+    throw new Error("DynamoDB storage failed: " + error.message);
   }
 }
 

@@ -22,3 +22,5 @@ This project is an AWS Lambda function that fetches sneaker prices, send email n
 2. The Lambda function fetches real-time sneaker pricing using the Sneaks API.
 3. If the current sneaker price is below or equal to the user's price target, the function sends an email to the user.
 4. The user's information (email, price target, notification preferences, sneaker data) is stored in AWS DynamoDB for future reference.
+
+zip: zip -r function.zip . -x "node_modules/*" "*.git*" "*.DS_Store" "my-layer/*"
